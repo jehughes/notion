@@ -36,14 +36,29 @@ body{
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
 
-    
+    var month_abbr = new Array(12);
+    months[0] = "Jan";
+    months[1] = "Feb";
+    months[2] = "Mar";
+    months[3] = "Apr";
+    months[4] = "May";
+    months[5] = "Jun";
+    months[6] = "Jul";
+    months[7] = "Aug";
+    months[8] = "Sept";
+    months[9] = "Oct";
+    months[10] = "Nov";
+    months[11] = "Dec";
+  
     var today = new Date();
-    var hrs = today.getHours();
+    
     var dayOfWeek = weekday[today.getDay()];
-    var date = dayOfWeek+" " + (today.getMonth()+1) + "/" +today.getDate() +'/'+today.getFullYear()  ;
+    var monthAbbr = month_abbr[today.getMonth()];
+    var date = dayOfWeek+" " + monthAbbr + "/" + today.getDate() +'/'+today.getFullYear()  ;
 
     var greet;
-
+    var hrs = today.getHours();
+    
     if (hrs < 12)
         greet = 'Good Morning  ';
     else if (hrs >= 12 && hrs <= 17)
