@@ -66,9 +66,11 @@ body{
     else if (hrs >= 16 && hrs <= 24)
         greet = 'Good Evening  ';
 
-    var msg = '';
+    var msg;
     if (hrs >= 17)
         msg = "It's after 5pm, time to shut down!";
+    else
+        msg = 'Time to work!';
     
     document.getElementById('lbl').innerHTML =
         greet+=`<div id="date"> It's ${date}</div><div id="date">${msg}</div>`;
